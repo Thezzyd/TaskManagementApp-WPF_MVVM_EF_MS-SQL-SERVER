@@ -1,11 +1,7 @@
-﻿
-
-using TaskManagementApp.DTOs;
+﻿using TaskManagementApp.DTOs;
 using TaskManagementApp.Services;
 using TaskManagementApp.SharedData;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -166,7 +162,7 @@ namespace TaskManagementApp.ViewModels
             }
             if (SelectedTaskDtoToUpdate.Name == Name &&
                SelectedTaskDtoToUpdate.Description == Description &&
-               SelectedTaskDtoToUpdate.Deadline == Deadline &&
+               SelectedTaskDtoToUpdate.Deadline == (IsDeadline ? Deadline : null) &&
                SelectedTaskDtoToUpdate.Priority.ToString() == Priority &&
                SelectedTaskDtoToUpdate.Status == Status &&
                SelectedTaskDtoToUpdate.IsHidden == IsHidden)
@@ -192,7 +188,7 @@ namespace TaskManagementApp.ViewModels
                     Id = SelectedTaskDtoToUpdate.Id,
                     Name = Name,
                     Description = Description,
-                    Deadline = Deadline,
+                    Deadline = IsDeadline ? Deadline : null,
                     Priority = Int32.Parse(Priority),
                     IsHidden = IsHidden,
                     Status = Status

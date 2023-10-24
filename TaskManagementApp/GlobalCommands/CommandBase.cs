@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace TaskManagementApp.Commands
+namespace TaskManagementApp.GlobalCommands
 {
     public abstract class CommandBase : ICommand
     {

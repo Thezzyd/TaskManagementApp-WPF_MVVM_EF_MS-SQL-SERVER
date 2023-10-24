@@ -1,9 +1,5 @@
-﻿using TaskManagementApp.ErrorHandler;
-using TaskManagementApp.SharedData;
+﻿using TaskManagementApp.SharedData;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -13,17 +9,13 @@ namespace TaskManagementApp.ViewModels
     {
         private readonly Func<object, Task> _executeAction;
         private readonly Predicate<object> _canExecuteAction;
-        //private readonly IErrorHandler _errorHandler;
         private bool _isExecuting;
      
-
-        public ViewModelAsyncCommand(Func<object, Task> executeAction, Predicate<object> canExecuteAction = null, IErrorHandler errorHandler = null)
+        public ViewModelAsyncCommand(Func<object, Task> executeAction, Predicate<object> canExecuteAction = null)
         {
             _executeAction = executeAction;
             _canExecuteAction = canExecuteAction;
-            //_errorHandler = errorHandler;
         }
-
 
         public event EventHandler CanExecuteChanged
         {

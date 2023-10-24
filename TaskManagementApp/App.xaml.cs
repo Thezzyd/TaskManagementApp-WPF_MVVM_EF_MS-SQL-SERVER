@@ -14,7 +14,7 @@ namespace TaskManagementApp
 {
     public partial class App : Application
     {
-        private const string CONNECTION_STRING = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog = MVVMLoginDb2;";
+        private const string CONNECTION_STRING = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog = TaskManagementAppDb;";
 
         private readonly AppDbContextFactory _appDbContextFactory;
         private readonly NavigationStore _navigationStore;

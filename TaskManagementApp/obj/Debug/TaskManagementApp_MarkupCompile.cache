@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Grzegorz\source\repos\TaskManagementApp\TaskManagementApp\App.xaml
-12-1515494933
+121972300469
 
-62-2108024563
+58579010948
 77615944078
-CustomControls\BindablePasswordBox.xaml;CustomControls\CloseButton.xaml;CustomControls\CloseModalButton.xaml;CustomControls\CustomStandardButton.xaml;CustomControls\LogoutButton.xaml;CustomControls\MinimizeButton.xaml;MainWindow.xaml;Views\CreateTask.xaml;Views\Login.xaml;Views\Register.xaml;Views\TasksMenu.xaml;Views\UpdateTask.xaml;
+CustomControls\BindablePasswordBox.xaml;CustomControls\CloseButton.xaml;CustomControls\CloseModalButton.xaml;CustomControls\CustomStandardButton.xaml;CustomControls\LogoutButton.xaml;CustomControls\MinimizeButton.xaml;Views\MainWindow.xaml;Views\CreateTask.xaml;Views\Login.xaml;Views\Register.xaml;Views\TasksMenu.xaml;Views\UpdateTask.xaml;
 
 False
 

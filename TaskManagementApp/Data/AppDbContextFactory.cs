@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-
 namespace TaskManagementApp.Data
 {
     internal class AppDbContextFactory

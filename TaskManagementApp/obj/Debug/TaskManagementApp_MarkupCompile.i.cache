@@ -4,17 +4,17 @@
 exe
 C#
 .cs
-C:\Users\Grzegorz\source\repos\SoloTry_1\SoloTry_1\obj\Debug\
+C:\Users\Grzegorz\source\repos\TaskManagementApp\TaskManagementApp\obj\Debug\
 TaskManagementApp
 none
 false
 DEBUG;TRACE
-C:\Users\Grzegorz\source\repos\SoloTry_1\SoloTry_1\App.xaml
-12-1515494933
+C:\Users\Grzegorz\source\repos\TaskManagementApp\TaskManagementApp\App.xaml
+121972300469
 
-63-186246442
-771814238168
-CustomControls\BindablePasswordBox.xaml;CustomControls\CloseButton.xaml;CustomControls\CloseModalButton.xaml;CustomControls\CustomStandardButton.xaml;CustomControls\LogoutButton.xaml;CustomControls\MinimizeButton.xaml;MainWindow.xaml;Views\CreateTask.xaml;Views\Login.xaml;Views\Register.xaml;Views\TasksMenu.xaml;Views\UpdateTask.xaml;
+59-1794178227
+77615944078
+CustomControls\BindablePasswordBox.xaml;CustomControls\CloseButton.xaml;CustomControls\CloseModalButton.xaml;CustomControls\CustomStandardButton.xaml;CustomControls\LogoutButton.xaml;CustomControls\MinimizeButton.xaml;Views\MainWindow.xaml;Views\CreateTask.xaml;Views\Login.xaml;Views\Register.xaml;Views\TasksMenu.xaml;Views\UpdateTask.xaml;
 
-False
+True
 

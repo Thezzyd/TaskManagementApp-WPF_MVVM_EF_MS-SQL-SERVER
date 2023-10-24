@@ -1,19 +1,12 @@
 ﻿using TaskManagementApp.Services;
-using TaskManagementApp.Stores;
-using TaskManagementApp.ViewModels;
-using TaskManagementApp.Views;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TaskManagementApp.Commands
+namespace TaskManagementApp.GlobalCommands
 {
     public class NavigateCommand : CommandBase
     {
-        private readonly INavigationService _navigationService;
-        private readonly Predicate<object> _canExecuteAction;
+        protected readonly INavigationService _navigationService;
+        protected readonly Predicate<object> _canExecuteAction;
 
         public NavigateCommand(INavigationService navigationService)
         {

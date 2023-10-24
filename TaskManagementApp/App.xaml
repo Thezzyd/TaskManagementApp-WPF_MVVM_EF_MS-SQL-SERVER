@@ -19,7 +19,6 @@
             <SolidColorBrush x:Key="ErrorMessageColor" Color="Red" />
             <SolidColorBrush x:Key="SuccessMessageColor" Color="#FFFFFF" />
 
-            <!--Background Colors-->
             <Color x:Key="BgColor1">#210F55</Color>
             <Color x:Key="BgColor2">#24105F</Color>
             <Color x:Key="BgColor3">#FFFFFF</Color>

@@ -1,13 +1,9 @@
 ﻿using TaskManagementApp.DTOs;
 using TaskManagementApp.ViewModels;
-using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TaskManagementApp.ExtensionMethods
+namespace TaskManagementApp.Extensions
 {
     public static class TaskExtensions
     {

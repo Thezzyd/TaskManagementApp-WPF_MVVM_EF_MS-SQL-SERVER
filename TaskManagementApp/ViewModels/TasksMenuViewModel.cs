@@ -1,6 +1,6 @@
-﻿using TaskManagementApp.Commands;
+﻿using TaskManagementApp.GlobalCommands;
 using TaskManagementApp.DTOs;
-using TaskManagementApp.ExtensionMethods;
+using TaskManagementApp.Extensions;
 using TaskManagementApp.Services;
 using TaskManagementApp.SharedData;
 using System;

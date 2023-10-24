@@ -1,4 +1,4 @@
-﻿using TaskManagementApp.Commands;
+﻿using TaskManagementApp.GlobalCommands;
 using TaskManagementApp.Services;
 using System;
 using System.Threading.Tasks;

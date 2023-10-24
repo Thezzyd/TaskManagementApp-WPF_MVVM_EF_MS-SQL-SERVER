@@ -21,7 +21,6 @@ namespace TaskManagementApp.Stores
             }
         }
 
-        public bool IsOpen => _currentViewModel != null;
         public void Close()
         {
             CurrentViewModel = null;

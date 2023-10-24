@@ -1,8 +1,7 @@
 ﻿using TaskManagementApp.Services;
 using System;
 using System.Windows.Input;
-using TaskManagementApp.Commands;
-using System.Threading.Tasks;
+using TaskManagementApp.GlobalCommands;
 using TaskManagementApp.Models;
 
 namespace TaskManagementApp.ViewModels

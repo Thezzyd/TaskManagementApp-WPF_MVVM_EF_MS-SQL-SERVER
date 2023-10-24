@@ -10,7 +10,6 @@ namespace TaskManagementApp.ViewModels
 
         public ViewModelBase CurrentViewModel => _navigationStore.CurrentViewModel;
         public ViewModelBase CurrentModalViewModel => _modalNavigationStore.CurrentViewModel;
-        public bool IsModalOpen => _modalNavigationStore.IsOpen;
 
         public MainViewModel(NavigationStore navigationStore, ModalNavigationStore modalNavigationStore)
         {
@@ -29,7 +28,6 @@ namespace TaskManagementApp.ViewModels
         private void OnCurrentModalViwModelChanged()
         {
             OnPropertyChanged(nameof(CurrentModalViewModel));
-            OnPropertyChanged(nameof(IsModalOpen));
         }
     }
 }
