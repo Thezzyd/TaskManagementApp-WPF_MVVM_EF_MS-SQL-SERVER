@@ -1,0 +1,162 @@
+﻿<UserControl x:Class="TaskManagementApp.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManagementApp.Views" 
+        xmlns:customcontrols="clr-namespace:TaskManagementApp.CustomControls"
+        mc:Ignorable="d"
+        Height="420" Width="600"
+        Background="Transparent"
+        MouseDown="Window_MouseDown"
+        >
+
+    <Border 
+            CornerRadius="5"
+            BorderThickness="2"
+            BorderBrush="{StaticResource LightBorders}">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,1.8" EndPoint="1,1">
+                <GradientStop Color="{StaticResource BgColor1}" Offset="0" />
+                <GradientStop Color="{StaticResource BgColor2}" Offset="1" />
+            </LinearGradientBrush>
+        </Border.Background>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0"
+                           Text="LOGIN"
+                           Foreground="{StaticResource LightText}"
+                           FontSize="16"
+                           TextAlignment="Left"
+                           VerticalAlignment="Center"
+                           Padding="10,0,0,0"/>
+
+                <customcontrols:MinimizeButton Grid.Column="1" />
+                <customcontrols:CloseButton Grid.Column="2"/>
+                
+            </Grid>
+
+            <StackPanel Grid.Row="1"
+                        Orientation="Vertical"
+                        Margin="0,30,0,0"
+                        Width="300">
+                
+                <Image Source="/Images/todoList_white.png"
+                       Width="70"
+                       Height="70"/>
+
+                <TextBlock Text="Task Managgement app"
+                           Foreground="{StaticResource LightText}"
+                           FontSize="18"
+                           FontWeight="Medium"
+                           TextAlignment="Center"
+                           Margin="0,10,0,0"/>
+
+                <TextBlock Text="Username:"
+                           Foreground="{StaticResource LightText}"
+                           FontSize="14"
+                           Margin="0,15,0,5"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" Grid.Row="0"
+                           Source="/Images/user_white.png"
+                           Width="25"
+                           Height="25"
+                           Margin="0,0,5,0"/>
+
+                    <TextBox x:Name="textBoxUsername" 
+                             Text="{Binding Username, UpdateSourceTrigger=PropertyChanged}"
+                             Grid.Column="1" Grid.Row="0"
+                             Background="Transparent"
+                             BorderBrush="{StaticResource LightBorders}"
+                             BorderThickness="0,0,0,2"
+                             Foreground="{StaticResource LightText}"
+                             CaretBrush="{StaticResource LightText}"/>
+                </Grid>
+
+                <TextBlock Text="Password:"
+                           Foreground="{StaticResource LightText}"
+                           FontSize="14"
+                           Margin="0,15,0,5"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0" 
+                           Source="/Images/key_white.png"
+                           Width="25"
+                           Height="25"
+                           Margin="0,0,5,0"/>
+
+                    <customcontrols:BindablePasswordBox Grid.Column="1"
+                                                        Password="{Binding Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                                        />
+                </Grid>
+
+                <Grid>
+                    
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               FontSize="12"
+                               Foreground="{StaticResource ErrorMessageColor}"
+                               Margin="0,10,0,0"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               />
+                    
+                    <TextBlock Text="{Binding SuccessMessage}"
+                               FontSize="12"
+                               Foreground="{StaticResource SuccessMessageColor}"
+                               Margin="0,10,0,0"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               />
+                </Grid>
+
+                <TextBlock Text="Click here to create new account..."
+                           TextDecorations="Underline"
+                           FontSize="12"
+                           Foreground="{StaticResource LightText}"
+                           FontStyle="Italic"
+                           TextAlignment="Center"
+                           Margin="0,10,0,0"
+                           Cursor="Hand"
+                           >
+                    
+                    <TextBlock.InputBindings>
+                        <MouseBinding Command="{Binding NavigateToRegisterCommand}"
+                                      MouseAction="LeftClick" />
+                    </TextBlock.InputBindings>
+                </TextBlock>
+
+                <customcontrols:CustomStandardButton SomeCommand="{Binding LoginUserCommand}"
+                                                     SomeContent="Login"
+                                                     Margin="0,15,0,0"
+                                                     FontSize="14"
+                                                     />
+            </StackPanel>
+        </Grid>
+        
+    </Border>       
+    
+</UserControl>

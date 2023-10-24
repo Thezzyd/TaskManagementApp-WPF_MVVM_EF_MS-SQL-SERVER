@@ -1,0 +1,175 @@
+﻿<UserControl x:Class="TaskManagementApp.Views.CreateTask"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskManagementApp.Views" 
+             xmlns:customcontrols="clr-namespace:TaskManagementApp.CustomControls"
+             xmlns:viewModel="clr-namespace:TaskManagementApp.ViewModels"
+             mc:Ignorable="d" 
+             Height="330" Width="400"
+             Background="Transparent"
+             MouseDown="UserControl_MouseDown"
+            >
+
+    <Border CornerRadius="5"
+            BorderThickness="2"
+            BorderBrush="{StaticResource LightBorders}"
+            >
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.7">
+                <GradientStop Color="{StaticResource BgColor1}" Offset="0" />
+                <GradientStop Color="{StaticResource BgColor2}" Offset="1" />
+            </LinearGradientBrush>
+        </Border.Background>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Create New Task"
+                           Foreground="{StaticResource LightText}"
+                           VerticalAlignment="Center"
+                           Padding="10,0,10,0"/>
+
+                <customcontrols:CloseModalButton  Grid.Row="0" Grid.Column="1"
+                                                  SomeCommand="{Binding CloseCommand}"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1"
+                        Width="300"
+                        Margin="0,20,0,20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"
+                               Text="Name *"
+                               Foreground="{StaticResource LightText}"
+                               VerticalAlignment="Center"
+                               />
+
+                    <TextBox Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                             Grid.Row="1"
+                             VerticalAlignment="Center"
+                             Background="Transparent"
+                             BorderBrush="{StaticResource LightBorders}"
+                             Foreground="{StaticResource LightText}"
+                             BorderThickness="0,0,0,2"
+                             CaretBrush="{StaticResource LightText}"
+                             />
+
+                    <TextBlock Grid.Row="3"
+                               Text="Description"
+                               Foreground="{StaticResource LightText}"
+                               VerticalAlignment="Center"
+                               />
+
+                    <TextBox Text ="{Binding Description, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4"
+                             VerticalAlignment="Center"
+                             TextWrapping="Wrap"
+                             AcceptsReturn="True"
+                             Height="80"
+                             VerticalScrollBarVisibility="Auto"
+                             />
+
+                    <Grid Grid.Row="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="80" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                               Text="Deadline"
+                               Foreground="{StaticResource LightText}"
+                               VerticalAlignment="Center"
+                               />
+                        <TextBlock Grid.Column="2"
+                               Text="Priority * "
+                               Foreground="{StaticResource LightText}"
+                               VerticalAlignment="Center"
+                               />
+                    </Grid>
+                    <Grid Grid.Row="7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="80"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox Text="{Binding Priority, UpdateSourceTrigger=PropertyChanged}" 
+                                 Grid.Column="3" Grid.ColumnSpan="2"
+                                 VerticalAlignment="Center" 
+                                 PreviewTextInput="NumberValidationTextBox" 
+                                 Background="Transparent"
+                                 BorderBrush="{StaticResource LightBorders}"
+                                 Foreground="{StaticResource LightText}"
+                                 BorderThickness="0,0,0,2"
+                                 CaretBrush="{StaticResource LightText}"
+                                 />
+
+                        <CheckBox IsChecked="{Binding IsDeadline, Mode=OneWayToSource}"
+                                  Grid.Column="0"
+                                  VerticalAlignment="Center"
+                                  Margin="0,0,5,0"/>
+
+                        <DatePicker IsEnabled="{Binding IsDeadline, Mode=TwoWay}" Grid.Column="1"
+                                    SelectedDate="{Binding Deadline}"
+                                    >
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox" >
+                                    <Setter Property="IsReadOnly" Value="True" />
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                    </Grid>
+
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               Grid.Row="9" 
+                               FontSize="10"
+                               Foreground="{StaticResource ErrorMessageColor}"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               />
+
+                    <TextBlock Text="{Binding SuccessMessage}"
+                               Grid.Row="9" 
+                               FontSize="10"
+                               Foreground="{StaticResource SuccessMessageColor}"
+                               TextAlignment="Center"
+                               TextWrapping="Wrap"
+                               />
+                    
+                    <Button Command="{Binding CreateTaskCommand}"
+                            Grid.Row="11"
+                            Content="Create Task"
+                            Width="100"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

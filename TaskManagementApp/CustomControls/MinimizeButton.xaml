@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="TaskManagementApp.CustomControls.MinimizeButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TaskManagementApp.CustomControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="20" d:DesignWidth="20">
+    
+    <Button 
+         x:Name="minButton"
+         Content="-"
+         FontSize="15"
+         Cursor="Hand"
+         Click="minButton_Click"
+         BorderThickness="0"
+         FontFamily="Montserrat"
+         >
+        <Button.Style>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource ButtonBg}" />
+                <Setter Property="Foreground" Value="{StaticResource LightText}" />
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Background" Value="{StaticResource LightBorders}" />
+                        <Setter Property="Foreground" Value="{StaticResource DarkText}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Button.Style>
+        <Button.Template>
+            <ControlTemplate TargetType="Button">
+                <Border Width="20" Height="20"
+                     CornerRadius="20"
+                     Background="{TemplateBinding Background}">
+                    <ContentPresenter VerticalAlignment="Center"
+                                   HorizontalAlignment="Center" />
+                </Border>
+            </ControlTemplate>
+        </Button.Template>
+    </Button>
+    
+</UserControl>
