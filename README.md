@@ -35,7 +35,7 @@ Po uruchomieniu, aplikacja sprawdzi czy wymagana baza danych istnieje (na podsta
 ### 2. Pierwszy widok po uruchomieniu
 Pierwszym widokiem aplikacji jaki siê pojawi bêdzie okno logowania. Nale¿y siê zalogowaæ na istniej¹ce konto (np. Test1) lub utworzyæ nowe klikaj¹c w odnoœnik "Click here to create account".
 
-|![LoginView](/ReadmeImages/LoginView.png) | 
+|![LoginView](/ReadmeImages/LoginView.PNG) | 
 |:--:| 
 | *Rysunek 2. Widok logowania utworzonej aplikacji* |
 
@@ -47,7 +47,7 @@ Po klikniêciu w odnoœnik "Click here to create account" z poziomu widoku logowan
 
 Z poziomu okna rejestracji istnieje mo¿liwoœæ przejœcia do okna logowania klikaj¹c w odnoœnik "click here to login".
 
-|![RegisterView](/ReadmeImages/RegisterView.png) | 
+|![RegisterView](/ReadmeImages/RegisterView.PNG) | 
 |:--:| 
 | *Rysunek 3. Widok rejestracji utworzonej aplikacji* |
 
@@ -73,7 +73,7 @@ Lista domyœlnie jest sortowana po wartoœci priorytetu malej¹co. Aby zmieniæ kolu
 
 Aby zobaczyæ opis, datê utworzenia zadania, oraz otworzyæ mo¿liwoœæ szybkiej zmiany statusu i widocznoœci zadania, nale¿y klikn¹æ w wybrane zadanie.
 
-|![TaskMenu_1](/ReadmeImages/TaskMenuView.png) | 
+|![TaskMenu_1](/ReadmeImages/TaskMenuView.PNG) | 
 |:--:| 
 | *Rysunek 4. Widok G³ównego okna z list¹ zadañ w utworzonej aplikacji* |
 
@@ -93,12 +93,12 @@ Wszystkie z powy¿szych przycisków s¹ dodatkowo zablokowane gdy istnieje ju¿ otwa
 
 Po klikniêciu w przycisk Create, pojawi siê nowe okienko, w którym nale¿y podaæ wartoœæ wszystkich pól oznaczonych znakiem "*" (Name, Priority). Po podaniu wymaganych wartoœci przycisk "Create task" zostanie odblokowany.
 
-|![TaskMenu_2](/ReadmeImages/TaskMenuView_Create.png) | 
+|![TaskMenu_2](/ReadmeImages/TaskMenuView_Create.PNG) | 
 |:--:| 
 | *Rysunek 6. Widok G³ównego okna wraz z okienkiem tworzenia nowego zadania w utworzonej aplikacji* |
 
 Po klikniêciu w przycisk "Edit", pojawi siê nowe okienko, w którym nale¿y zaktualizowaæ wartoœci po¿¹danych pól, pamiêtaj¹c aby nie pozostawiæ pustych pól oznaczonych znakiem "*" (Name, Priority, Status, Is Hidden). Po podaniu wymaganych wartoœci przycisk "Update task" zostanie odblokowany.
 
-|![TaskMenu_2](/ReadmeImages/TaskMenuView_Update.png) | 
+|![TaskMenu_2](/ReadmeImages/TaskMenuView_Update.PNG) | 
 |:--:| 
 | *Rysunek 6. Widok G³ównego okna wraz z okienkiem edycji zaznaczonego zadania w utworzonej aplikacji* |
