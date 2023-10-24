@@ -337,6 +337,7 @@
                           HeadersVisibility="Column"
                           BorderBrush="Transparent"
                           >
+                    
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Name}" Header="Name" Width="3*" HeaderStyle="{StaticResource ToLeftGridHeaderStyle}" >
                             <DataGridTextColumn.ElementStyle>
@@ -363,7 +364,7 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
 
-                        <DataGridTextColumn Binding="{Binding DaysLeft}" Header="Days Left" Width="90" HeaderStyle="{StaticResource ToCenterGridHeaderStyle}">
+                        <DataGridTextColumn Binding="{Binding DaysLeft, TargetNullValue=-}" Header="Days Left" Width="90" HeaderStyle="{StaticResource ToCenterGridHeaderStyle}">
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
                                     <Setter Property="TextBlock.HorizontalAlignment" Value="Center" />

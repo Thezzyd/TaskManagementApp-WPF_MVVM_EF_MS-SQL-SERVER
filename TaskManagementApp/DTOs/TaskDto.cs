@@ -10,12 +10,12 @@ namespace TaskManagementApp.DTOs
         public string Description { get; set; }
         public DateTime CreatedTime { get; set; }
         public DateTime? Deadline { get; set; }
-        public string DaysLeft
+        public int? DaysLeft
          {
              get
              {
-                 if (Deadline != null) return Deadline?.Date.Subtract(DateTime.Now.Date).Days.ToString();
-                 else return "-"; 
+                 if (Deadline != null) return Deadline?.Date.Subtract(DateTime.Now.Date).Days;
+                 else return null; 
              }
          }
 

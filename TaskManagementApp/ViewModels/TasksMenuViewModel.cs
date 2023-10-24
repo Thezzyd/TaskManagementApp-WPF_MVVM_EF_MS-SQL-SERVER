@@ -245,6 +245,7 @@ namespace TaskManagementApp.ViewModels
             InitializeStatusFilterOptions();
 
             IsTasksDatagridEnabled = true;
+            PrioritySign = ">";
             SuccessMessage = "Logs, here you will see information about performed actions.";
         }
 
