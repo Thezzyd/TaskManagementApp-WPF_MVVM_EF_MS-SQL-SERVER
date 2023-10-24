@@ -11,10 +11,10 @@ namespace TaskManagementApp.Models
     public enum TaskStatus
     {
        [Description("Not started")]
-       NotStarted,
+       NotStarted = 0,
        [Description("In progress")]
-       InProgress,
+       InProgress = 1,
        [Description("Finished")]
-       Finished
+       Finished = 2
     }
 }
