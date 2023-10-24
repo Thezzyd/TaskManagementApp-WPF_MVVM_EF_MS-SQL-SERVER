@@ -346,7 +346,7 @@
                             </DataGridTextColumn.ElementStyle>
                         </DataGridTextColumn>
                         
-                        <DataGridTextColumn Binding="{Binding Priority}" Header="Priority" HeaderStyle="{StaticResource ToCenterGridHeaderStyle}"  Width="65" >
+                        <DataGridTextColumn Binding="{Binding Priority}" Header="Priority" HeaderStyle="{StaticResource ToCenterGridHeaderStyle}"  Width="65">
                             <DataGridTextColumn.ElementStyle>
                                 <Style>
                                     <Setter Property="TextBlock.HorizontalAlignment" Value="Center" />

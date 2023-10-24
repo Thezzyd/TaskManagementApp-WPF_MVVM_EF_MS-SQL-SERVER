@@ -122,49 +122,54 @@ namespace TaskManagementApp
                 var tasks = new List<Models.Task>{
                     new Models.Task{
                         Id = Guid.NewGuid(),
-                        Name = "Task title 1",
-                        Description = "Task desc 1",
-                        Deadline = new DateTime(1995, 1, 2),
-                        Priority = 20,
+                        Name = "Ukończyć tą aplikację",
+                        Description = "Utworzyć aplikację do zarządzania listą zadań. Aplikacja powinna umożliwiać dodawanie, edytowanie, usuwanie i przeglądanie zadań. Dodatkowo, zadania powinny być przechowywane w bazie danych SQL. ",
+                        Deadline = new DateTime(2023, 10, 26),
+                        Status = Models.TaskStatus.InProgress,
+                        Priority = 999,
                         IsHidden = false,
                         UserId = user1Id
                     },
                     new Models.Task{
                         Id = Guid.NewGuid(),
-                        Name = "Task title 2",
-                        Description = "Task desc 2",
-                        Deadline = new DateTime(1995, 2, 2),
-                        Priority = 2,
+                        Name = "Dokupić akcje Ehang`a",
+                        Description = "Brać poniżej 14,5$ przed sprawozdaniem finansowym",
+                        Deadline = new DateTime(2023, 11, 30),
+                        Priority = 5,
                         IsHidden = false,
-                        UserId = user2Id
+                        UserId = user1Id
                     },
                     new Models.Task{
                         Id = Guid.NewGuid(),
-                        Name = "Task title 3",
-                        Description = "Task desc 3",
-                        CreatedTime = new DateTime(1995, 3, 1),
-                        Deadline = new DateTime(1995, 3, 2),
+                        Name = "Kupić ostrzałke do łańcucha",
+                        Description = "",
+                        Deadline = null,
+                        Priority = 4,
+                        IsHidden = false,
+                        UserId = user1Id
+                    },
+                    new Models.Task{
+                        Id = Guid.NewGuid(),
+                        Name = "Dodać nowych przeciwników do gry Slasher",
+                        Description = "1. Przeciwnik skaczący w kierunku bohatera co pewną stałą sekwencję czasu. \n2. ...",
+                        Deadline = new DateTime(2023, 11, 1),
+                        Priority = 3,
+                        IsHidden = false,
+                        UserId = user1Id
+                    },
+                    new Models.Task{
+                        Id = Guid.NewGuid(),
+                        Name = "Pociąć gałęzie",
+                        Description = "",
                         Priority = 10,
                         IsHidden = false,
                         UserId = user1Id
                     },
                     new Models.Task{
                         Id = Guid.NewGuid(),
-                        Name = "Task title 4",
-                        Description = "Task desc 4",
-                        CreatedTime = new DateTime(1995, 4, 1),
-                        Deadline = new DateTime(1995, 4, 2),
-                        Priority = 22,
-                        IsHidden = false,
-                        UserId = user1Id
-                    },
-                    new Models.Task{
-                        Id = Guid.NewGuid(),
-                        Name = "Task title 5",
-                        Description = "Task desc 5",
-                        CreatedTime = new DateTime(1995, 5, 1),
-                        Deadline = new DateTime(1995, 5, 2),
-                        Priority = 16,
+                        Name = "Wyciąć pień drzewa (po zakupie ostrzałki)",
+                        Description = "",
+                        Priority = 10,
                         IsHidden = false,
                         UserId = user1Id
                     },

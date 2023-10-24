@@ -499,7 +499,8 @@ namespace TaskManagementApp.ViewModels
                                                 .Search(SearchTerm)
                                                 .FilterPriority(Priority, PrioritySign)
                                                 .FilterStatus(StatusEntryViewModelItems)
-                                                .FilterVisibility(ShowVisible, ShowHidden));
+                                                .FilterVisibility(ShowVisible, ShowHidden)
+                                                .OrderByDescending(t => t.Priority));
 
                 foreach (var task in filteredTasks)
                 {
